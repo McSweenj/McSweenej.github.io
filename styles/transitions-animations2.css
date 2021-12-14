@@ -1,0 +1,151 @@
+picture>img {
+	animation-name: example;
+	animation-duration: 5s;
+}
+
+@keyframes example {
+	0% {
+		opacity: 0.1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+picture:hover {
+	transform: scale(1.5);
+}
+
+@media (max-width:320px) {
+	main>nav {
+		grid-area: nav;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px 0;
+	}
+	span>ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media (min-width:321px) and (max-width:720px) {
+	main>nav {
+		grid-area: nav;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: auto;
+		justify-content: space-around;
+		padding: 10px 0;
+	}
+}
+
+@media (min-width:721px) and (max-width:1224px) {
+	main {
+		display: grid;
+		width: 100%;
+		grid-template-areas: "nav" "h1" "picture" "div" "span" "footer";
+		grid-template-rows: auto;
+		grid-template-columns: auto;
+	}
+	main>nav {
+		grid-area: nav;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: auto;
+		justify-content: space-evenly;
+		padding: 10px 0;
+	}
+	nav>a:nth-of-type(1) {
+		flex-shrink: 1;
+	}
+	nav>a:nth-of-type(2) {
+		flex-shrink: 3;
+	}
+	nav>a:nth-of-type(3) {
+		flex-shrink: 1;
+	}
+	main>h1 {
+		grid-area: h1;
+		text-align: center;
+	}
+	main>picture {
+		grid-area: picture;
+		margin: 10px;
+		margin: 10px auto;
+		text-align: center;
+	}
+	main>div {
+		grid-area: div;
+		text-align: left;
+	}
+	main>span {
+		grid-area: span;
+		padding: 10px 0;
+		text-align: left;
+	}
+	main>footer {
+		grid-area: footer;
+		padding: 10px 0;
+		text-align: center;
+	}
+	span {
+		display: flex;
+		flex-direction: column;
+	}
+	span>h2 {
+		text-align: center;
+	}
+	footer>div {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		flex-basis: auto;
+	}
+	footer>div>p:nth-of-type(1) {
+		flex-grow: 1;
+	}
+	footer>div>p:nth-of-type(2) {
+		flex-grow: 1;
+	}
+	main>h1,
+	span>h2 {
+		padding: 10px 0;
+	}
+	main>#para,
+	span>p,
+	span>ul {
+		padding: 10px 10px;
+	}
+	#para>p~p {
+		padding: 10px 10px;
+	}
+	span>p~p {
+		text-align: center;
+	}
+	#para>p~p {
+		text-align: center;
+	}
+	.dark {
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	span>ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	span>ul>li {
+		list-style: none;
+	}
+}

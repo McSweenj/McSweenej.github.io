@@ -1,0 +1,10 @@
+.transition {
+	width: 200px;
+	height: 100px;
+	background: blueviolet;
+	transition: width 2s;
+}
+
+.transition:hover {
+	width: 400px;
+}

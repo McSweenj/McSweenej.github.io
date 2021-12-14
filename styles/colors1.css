@@ -1,0 +1,55 @@
+body {
+	background-color: skyblue;
+}
+
+nav {
+	background-color: black;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+main>h1 {
+	background-color: darkgray;
+}
+
+span>h2 {
+	background-color: darkgray;
+}
+
+footer {
+	background-color: black;
+	color: white;
+}
+
+main>#para,
+span>p,
+span>ul {
+	background-color: skyblue;
+}
+
+#para>p~p {
+	background-color: lightblue;
+	text-align: center;
+	color: black;
+}
+
+#para>p:first-of-type+p {
+	background-color: lightcoral;
+	color: white;
+}
+
+span>h2+p {
+	background-color: lightcoral;
+}
+
+span>p~p {
+	background-color: darkgray;
+	color: black;
+}
+
+span>ul {
+	background-color: lightblue;
+}
